@@ -1,0 +1,14 @@
+{
+  "name": "chatmingle",
+  "version": "1.0.0",
+  "description": "this is a chatbot application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bijaya Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
