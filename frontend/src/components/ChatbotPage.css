@@ -1,0 +1,80 @@
+/* ChatbotPage.css */
+
+.chatbot-page {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-toggle-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* ChatWindow.css */
+
+.chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.message-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.input-container {
+    display: flex;
+    padding: 8px;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.input-container button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* MessageBubble.css */
+
+.message-bubble {
+    margin: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    max-width: 70%;
+}
+
+.message-bubble.user {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.message-bubble.bot {
+    background-color: #f0f0f0;
+    color: #333;
+}
