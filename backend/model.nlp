@@ -1,0 +1,866 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greet",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greet",
+            "domain": "default"
+          },
+          "are,how,you": {
+            "intent": "enquiry",
+            "domain": "default"
+          },
+          "for,goodby,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "later,okay,see,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "howdi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "is,name,what,your": {
+            "intent": "identity",
+            "domain": "default"
+          },
+          "can,help,how,i,you": {
+            "intent": "enquiry",
+            "domain": "default"
+          },
+          "goodby": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "thank": {
+            "intent": "gratitude",
+            "domain": "default"
+          },
+          "about,is,site,what,your": {
+            "intent": "info",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet": "default",
+          "enquiry": "default",
+          "greetings.bye": "default",
+          "greetings.hello": "default",
+          "identity": "default",
+          "farewell": "default",
+          "gratitude": "default",
+          "info": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greet"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greet"
+          },
+          {
+            "domain": "default",
+            "utterance": "how are you",
+            "intent": "enquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "goodbye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye bye take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "okay see you later",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "howdy",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greet"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greet"
+          },
+          {
+            "domain": "default",
+            "utterance": "how are you",
+            "intent": "enquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your name",
+            "intent": "identity"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can I help you",
+            "intent": "enquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "thanks",
+            "intent": "gratitude"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is your site about",
+            "intent": "info"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hi": 1,
+              "how": 1,
+              "are": 1,
+              "you": 1,
+              "goodby": 1,
+              "for": 1,
+              "now": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "okay": 1,
+              "see": 1,
+              "later": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "howdi": 1,
+              "what": 1,
+              "is": 1,
+              "your": 1,
+              "name": 1,
+              "can": 1,
+              "help": 1,
+              "thank": 1,
+              "site": 1,
+              "about": 1
+            },
+            "intents": {
+              "greet": 1,
+              "enquiry": 1,
+              "greetings.bye": 1,
+              "greetings.hello": 1,
+              "identity": 1,
+              "farewell": 1,
+              "gratitude": 1,
+              "info": 1
+            },
+            "intentFeatures": {
+              "greet": {
+                "hello": 1,
+                "hi": 1
+              },
+              "enquiry": {
+                "how": 1,
+                "are": 1,
+                "you": 1,
+                "can": 1,
+                "i": 1,
+                "help": 1
+              },
+              "greetings.bye": {
+                "goodby": 1,
+                "for": 1,
+                "now": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "okay": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1
+              },
+              "greetings.hello": {
+                "hello": 1,
+                "hi": 1,
+                "howdi": 1
+              },
+              "identity": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "name": 1
+              },
+              "farewell": {
+                "goodby": 1,
+                "bye": 1
+              },
+              "gratitude": {
+                "thank": 1
+              },
+              "info": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "site": 1,
+                "about": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greet",
+                "greetings.hello"
+              ],
+              "hi": [
+                "greet",
+                "greetings.hello"
+              ],
+              "how": [
+                "enquiry"
+              ],
+              "are": [
+                "enquiry"
+              ],
+              "you": [
+                "enquiry",
+                "greetings.bye"
+              ],
+              "can": [
+                "enquiry"
+              ],
+              "i": [
+                "enquiry",
+                "greetings.bye"
+              ],
+              "help": [
+                "enquiry"
+              ],
+              "goodby": [
+                "greetings.bye",
+                "farewell"
+              ],
+              "for": [
+                "greetings.bye"
+              ],
+              "now": [
+                "greetings.bye"
+              ],
+              "bye": [
+                "greetings.bye",
+                "farewell"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "okay": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "later": [
+                "greetings.bye"
+              ],
+              "must": [
+                "greetings.bye"
+              ],
+              "go": [
+                "greetings.bye"
+              ],
+              "howdi": [
+                "greetings.hello"
+              ],
+              "what": [
+                "identity",
+                "info"
+              ],
+              "is": [
+                "identity",
+                "info"
+              ],
+              "your": [
+                "identity",
+                "info"
+              ],
+              "name": [
+                "identity"
+              ],
+              "thank": [
+                "gratitude"
+              ],
+              "site": [
+                "info"
+              ],
+              "about": [
+                "info"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi",
+                "how",
+                "are",
+                "you",
+                "goodby",
+                "for",
+                "now",
+                "bye",
+                "take",
+                "care",
+                "okay",
+                "see",
+                "later",
+                "i",
+                "must",
+                "go",
+                "howdi",
+                "what",
+                "is",
+                "your",
+                "name",
+                "can",
+                "help",
+                "thank",
+                "site",
+                "about"
+              ],
+              "intents": [
+                "greet",
+                "enquiry",
+                "greetings.bye",
+                "greetings.hello",
+                "identity",
+                "farewell",
+                "gratitude",
+                "info"
+              ],
+              "perceptrons": [
+                [
+                  7.43068265914917,
+                  7.432356834411621,
+                  -0.8481044769287109,
+                  -0.6631220579147339,
+                  -1.3567794561386108,
+                  -2.07248592376709,
+                  -0.7960222363471985,
+                  -0.7960222363471985,
+                  -2.0850303173065186,
+                  -0.6062099933624268,
+                  -0.6062099933624268,
+                  -0.4842522144317627,
+                  -0.4842522144317627,
+                  -0.4842522144317627,
+                  -1.0366243124008179,
+                  -0.8524577021598816,
+                  -0.8524577021598816,
+                  -1.6882516145706177,
+                  -0.6978518962860107,
+                  -0.6978518962860107,
+                  -0.6978518962860107,
+                  -0.4544699788093567,
+                  -0.1461968868970871,
+                  -0.1461968868970871,
+                  -2.0658063888549805,
+                  -0.2016763985157013,
+                  -0.2016763985157013,
+                  2.055427743759042
+                ],
+                [
+                  -0.47840335965156555,
+                  -0.46659207344055176,
+                  5.697822093963623,
+                  4.105123043060303,
+                  4.159172058105469,
+                  -0.43112340569496155,
+                  -0.24228782951831818,
+                  -0.24228782951831818,
+                  -0.4984549582004547,
+                  -0.1481499820947647,
+                  -0.1481499820947647,
+                  -1.50869882106781,
+                  -1.50869882106781,
+                  -1.50869882106781,
+                  0.9197232723236084,
+                  -0.6640336513519287,
+                  -0.6640336513519287,
+                  -0.3235965967178345,
+                  -0.22979967296123505,
+                  -0.22979967296123505,
+                  -0.22979967296123505,
+                  -0.10522950440645218,
+                  1.5927002429962158,
+                  1.5927002429962158,
+                  -0.3318209946155548,
+                  -0.08356653153896332,
+                  -0.08356653153896332,
+                  0.3235967773804736
+                ],
+                [
+                  -1.8145248889923096,
+                  -1.7946677207946777,
+                  -2.620495080947876,
+                  -1.0367796421051025,
+                  1.579740285873413,
+                  -0.06413215398788452,
+                  7.142810344696045,
+                  7.142810344696045,
+                  -0.06409420818090439,
+                  7.142784118652344,
+                  7.142784118652344,
+                  4.213925361633301,
+                  4.213925361633301,
+                  4.213925361633301,
+                  3.6937503814697266,
+                  5.263882160186768,
+                  5.263882160186768,
+                  -1.2949798107147217,
+                  -0.6120123267173767,
+                  -0.6120123267173767,
+                  -0.6120123267173767,
+                  -0.4134867489337921,
+                  -1.5553778409957886,
+                  -1.5553778409957886,
+                  -0.9806417226791382,
+                  -0.1461225301027298,
+                  -0.1461225301027298,
+                  0.06418586616892724
+                ],
+                [
+                  2.1986303329467773,
+                  2.1969473361968994,
+                  -0.8495146632194519,
+                  -0.6090272068977356,
+                  -1.2044206857681274,
+                  -2.60042405128479,
+                  -0.4247637987136841,
+                  -0.4247637987136841,
+                  -2.600409746170044,
+                  -0.331756055355072,
+                  -0.331756055355072,
+                  -0.3536142408847809,
+                  -0.3536142408847809,
+                  -0.3536142408847809,
+                  -0.9152740240097046,
+                  -0.6747950911521912,
+                  -0.6747950911521912,
+                  11.317095756530762,
+                  -0.7184115648269653,
+                  -0.7184115648269653,
+                  -0.7184115648269653,
+                  -0.4935823976993561,
+                  -0.20164042711257935,
+                  -0.20164042711257935,
+                  -2.600395441055298,
+                  -0.22272858023643494,
+                  -0.22272858023643494,
+                  2.6007383194629026
+                ],
+                [
+                  -0.274530291557312,
+                  -0.27445462346076965,
+                  -0.1321595013141632,
+                  -0.03704962134361267,
+                  -0.18238328397274017,
+                  -0.3056371510028839,
+                  -0.0727730393409729,
+                  -0.0727730393409729,
+                  -0.310536652803421,
+                  -0.04227016866207123,
+                  -0.04227016866207123,
+                  -0.03561457246541977,
+                  -0.03561457246541977,
+                  -0.03561457246541977,
+                  -0.1580100953578949,
+                  -0.05925416946411133,
+                  -0.05925416946411133,
+                  -0.27133628726005554,
+                  2.5234014987945557,
+                  2.5234014987945557,
+                  2.5234014987945557,
+                  6.444171905517578,
+                  -0.07820358872413635,
+                  -0.07820358872413635,
+                  -0.29011258482933044,
+                  -3.9207699298858643,
+                  -3.9207699298858643,
+                  0.27133649423244094
+                ],
+                [
+                  -3.150648832321167,
+                  -3.1506474018096924,
+                  -0.8705400228500366,
+                  -0.8395704627037048,
+                  -1.44057035446167,
+                  11.13475513458252,
+                  -7.142650604248047,
+                  -7.142650604248047,
+                  11.134076118469238,
+                  -7.1421709060668945,
+                  -7.1421709060668945,
+                  -0.570029616355896,
+                  -0.570029616355896,
+                  -0.570029616355896,
+                  -1.0708622932434082,
+                  -1.039892554283142,
+                  -1.039892554283142,
+                  -3.1504807472229004,
+                  -0.8846204876899719,
+                  -0.8846204876899719,
+                  -0.8846204876899719,
+                  -0.4967816472053528,
+                  -0.024070266634225845,
+                  -0.024070266634225845,
+                  -3.1505846977233887,
+                  -0.38526707887649536,
+                  -0.38526707887649536,
+                  3.150700533367891
+                ],
+                [
+                  -1.5760648250579834,
+                  -1.5759857892990112,
+                  -0.4399850368499756,
+                  -0.41266971826553345,
+                  -0.7242969274520874,
+                  -1.5741225481033325,
+                  -0.36779898405075073,
+                  -0.36779898405075073,
+                  -1.574122667312622,
+                  -0.3133166432380676,
+                  -0.3133166432380676,
+                  -0.2842867970466614,
+                  -0.2842867970466614,
+                  -0.2842867970466614,
+                  -0.5438652634620667,
+                  -0.5165497660636902,
+                  -0.5165497660636902,
+                  -1.574122667312622,
+                  -0.4480077922344208,
+                  -0.4480077922344208,
+                  -0.4480077922344208,
+                  -0.2305936962366104,
+                  -0.021898888051509857,
+                  -0.021898888051509857,
+                  12.711586952209473,
+                  -0.21292763948440552,
+                  -0.21292763948440552,
+                  1.5741234419911783
+                ],
+                [
+                  -0.29204484820365906,
+                  -0.2846132516860962,
+                  -0.117047518491745,
+                  -0.10764709115028381,
+                  -0.19959209859371185,
+                  -0.12353076040744781,
+                  -0.14376729726791382,
+                  -0.14376729726791382,
+                  -0.18073932826519012,
+                  -0.08980301767587662,
+                  -0.08980301767587662,
+                  -0.06410855054855347,
+                  -0.06410855054855347,
+                  -0.06410855054855347,
+                  -0.10319201648235321,
+                  -0.09394136071205139,
+                  -0.09394136071205139,
+                  -0.13392572104930878,
+                  1.315638780593872,
+                  1.315638780593872,
+                  1.315638780593872,
+                  -3.884812593460083,
+                  -0.004418246913701296,
+                  -0.004418246913701296,
+                  -0.05197235569357872,
+                  5.200449466705322,
+                  5.200449466705322,
+                  -0.06210234392997536
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "how are you"
+      ],
+      [
+        "en",
+        "goodbye for now"
+      ],
+      [
+        "en",
+        "bye bye take care"
+      ],
+      [
+        "en",
+        "okay see you later"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "how are you"
+      ],
+      [
+        "en",
+        "what is your name"
+      ],
+      [
+        "en",
+        "how can I help you"
+      ],
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "bye"
+      ],
+      [
+        "en",
+        "thanks"
+      ],
+      [
+        "en",
+        "What is your site about"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greet": [
+          {
+            "answer": "Hello! How can I help you today?"
+          }
+        ],
+        "enquiry": [
+          {
+            "answer": "I am fine, thanks for asking!"
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "Till next time"
+          },
+          {
+            "answer": "see you soon!"
+          }
+        ],
+        "greetings.hello": [
+          {
+            "answer": "Hey there!"
+          },
+          {
+            "answer": "Greetings!"
+          }
+        ],
+        "identity": [
+          {
+            "answer": "My name is ChatBot."
+          }
+        ],
+        "farewell": [
+          {
+            "answer": "Goodbye! Have a nice day!"
+          }
+        ],
+        "gratitude": [
+          {
+            "answer": "You're welcome!"
+          }
+        ],
+        "info": [
+          {
+            "answer": "This is a Chatbot website."
+          },
+          {
+            "answer": "It is my personal chatbot."
+          },
+          {
+            "answer": "My name is ChatMingle."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
