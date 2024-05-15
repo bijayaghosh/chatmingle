@@ -1,9 +1,11 @@
 const express = require('express');
+const app = express();
+const cors = require('cors');
 const { NlpManager } = require('node-nlp');
 
-const app = express();
 const port = 5000;
 
+app.use(cors()); // Enable CORS
 app.use(express.json());
 
 const manager = new NlpManager({ languages: ['en'] });
