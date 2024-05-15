@@ -17,6 +17,8 @@ import './HomePage.css';
 function HomePage() {
   let navigate = useNavigate();
 
+
+
   return (
     <>
       <Navbar bg="primary" data-bs-theme="dark">
@@ -32,25 +34,26 @@ function HomePage() {
 
       <Container>
         <Container>
+          {/* Sent message */}
           <Alert variant="light">
             <p>Hello</p>
           </Alert>
+
+          {/* Received message */}
           <Alert variant="primary">
             <p>Hi! How can I help you today?</p>
           </Alert>
+
+          {/* Input box and button to send the message */}
           <Form>
             <InputGroup className="mb-3">
               <Form.Control
                 placeholder="Enter a message"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
               />
-              <InputGroup.Text id="basic-addon1">
+              <InputGroup.Text>
                 <Button variant="primary">Send</Button>{' '}
               </InputGroup.Text>
             </InputGroup>
-
-
           </Form>
         </Container>
 
